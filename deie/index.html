@@ -178,7 +178,8 @@ const PROGRESS_COLOR = "#96b498";
 
 const STORAGE_KEY = "dpend-mal-2026-deie";
 let progress = {};
-GOALS.forEach(g => progress[g.n] = 0);
+const START = {1:0, 2:0, 3:50, 4:50, 5:0, 6:0, 7:0, 8:0, 9:80, 10:50, 11:40, 12:50, 13:40};
+GOALS.forEach(g => progress[g.n] = START[g.n] || 0);
 
 const grid = document.getElementById("grid");
 const cardEls = {};
